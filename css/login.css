@@ -1,0 +1,52 @@
+.loginBox
+{
+	overflow: auto;
+	opacity: 0.90;
+	background-color: #000000;
+	border-left: 2px solid #ffd700;
+	border-right: 2px solid #ffd700;
+	position: absolute;
+	top: 55%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 600px;
+	width: 500px;
+	border-radius: 25px;
+}
+
+.inputTextLogin
+{
+	width: 70%;
+	height: 10%;
+    border: none;
+    border-bottom: 2px solid #ffd700;
+    background-color: #070707;
+    color: #ffd700;
+}
+
+.customButtonSpecialLogin
+{
+	font-size: 16px;
+	padding: 8px 16px;
+	background-color: #ffd700;
+	color: #000000;
+	border: 2px solid #fdd700;
+	opacity: 0.9;
+	border-radius: 15px;
+	transition-duration: 0.4s;
+}
+
+.customButtonSpecialLogin:hover
+{
+	opacity: 1;
+	box-shadow: 0 0 50px 0 rgba(255,215,0,0.7);
+}
+
+.boxTextSetLogin
+{
+	font-size: 18px;
+	float: left; 
+	padding: 0 20px;
+	font-weight: bold;
+	color: #ffd700;
+}

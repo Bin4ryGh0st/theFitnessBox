@@ -1,0 +1,84 @@
+.signupBox
+{
+	overflow: auto;
+	opacity: 0.90;
+	background-color: #000000;
+	border: none;
+	border-left: 2px solid #ffd700;
+	border-right: 2px solid #ffd700;
+	border-radius: 80px;
+	position: absolute;
+	top: 75%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: 1200px;
+	width: 1600px;
+}
+
+.inputTextSignup
+{
+	width: 50%;
+	height: 4%;
+	border: none;
+    border-bottom: 2px solid #ffd700;
+    background-color: #070707;
+    color: #ffd700;
+}
+
+.boxTextSetSignup
+{
+	font-size: 18px;
+	float: left; 
+	padding: 0 345px;
+	font-weight: bold;
+	color: #ffd700;
+}
+
+.setDropdownSignup
+{
+	background-color: #000000;
+	border: #ffd700 solid 2px;
+	border-radius: 10px;
+	font-size: 16px;
+	color: #ffd700;
+	width: 15%;
+	height: 4%;
+  	-moz-appearance: none;
+}
+
+.customButtonSpecialSignup
+{
+	font-size: 16px;
+	padding: 10px 20px;
+	background-color: #ffd700;
+	color: #000000;
+	border: 2px solid #fdd700;
+	opacity: 0.9;
+	border-radius: 15px;
+	transition-duration: 0.4s;
+}
+
+.customButtonSpecialSignup:hover
+{
+	opacity: 1;
+	box-shadow: 0 0 50px 0 rgba(255,215,0,0.7);
+}
+
+.customButtonSpecialDisabled
+{
+	font-size: 16px;
+	padding: 10px 20px;
+	background-color: #c0c0c0;
+	color: #000000;
+	border: #c0c0c0;
+	opacity: 0.9;
+	border-radius: 15px;
+	transition-duration: 0.4s;
+}
+
+.unblockMessage
+{
+	color: #ffd700; 
+	float: right; 
+	padding-right: 100px;
+}
