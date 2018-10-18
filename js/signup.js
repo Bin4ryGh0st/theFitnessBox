@@ -92,6 +92,7 @@ function emailExists(email)
     	 	{
     	 		alert(this.responseText);
     	 	}
+    	 	verify();
     	}
   	}
   	xmlhttp.open("POST","verEm.php", true);
@@ -250,22 +251,19 @@ function finalVerification()
 	checkPass();
 	var d=verify();
 	if(d)
-	{	var n=document.getElementById("signupName").value;
+	{	
+		var n=document.getElementById("signupName").value;
 		var e=document.getElementById("signupEmail").value;
 		var d=document.getElementById("signupDOB").value;
 		var g=document.getElementById("signupGender").value;
 		var b=document.getElementById("signupBMI").value;
 		var p=document.getElementById("signupPassword").value;
-		alert(1);
 		var xmlhttp1= new XMLHttpRequest();
 		xmlhttp1.onreadystatechange = function() 
 		{
-			alert(5);
 			if (this.readyState == 4 && this.status == 200) 
 			{
-				alert(6);
-				alert(this.responseText);
-				alert(7);
+				alert(this.responseText)
 				if(this.responseText=="no")
 				{
 					alert("Signup failed,please try again!");
@@ -278,11 +276,8 @@ function finalVerification()
 			}
 	  	}
 	  	xmlhttp1.open("POST","insertIntoDB.php", true);
-	  	alert(2);
 	  	xmlhttp1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	  	alert(3);
 	  	xmlhttp1.send("n="+n+"&e="+e+"&d="+d+"&g="+g+"&b="+b+"&p="+p);
-		alert(4);
 	}
 	return d;
 }

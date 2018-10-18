@@ -25,6 +25,7 @@ function showSelection(divId,buttonId)
 	if(divId=="sign")
 	{
 		clrStats();
+		console.log("cleared");
 	}
 }
 
