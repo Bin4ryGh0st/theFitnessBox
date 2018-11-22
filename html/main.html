@@ -35,7 +35,7 @@
 		
 		<div class="loginBox" style="display: none;" id="log">
 			<center>
-				<form name="loginForm" id="loginForm" method="POST" action="">
+				<form name="loginForm" id="loginForm" method="POST" action="http://localhost/theFitnessBox/php/loggedIn.php">
 					<br><br><br><br><br><br>
 					<font class="boxTextSetLogin">&#9594;&#10074;&#9473;&#10074;&#9592; Email:</font>
 					<br>
@@ -57,7 +57,7 @@
 		
 		<div class="signupBox" style="display: none;" id="sign">
 			<center>
-				<form name="signupForm" id="signupForm" method="POST" onsubmit="finalVerification()">
+				<form name="signupForm" id="signupForm" method="POST" onsubmit="return finalVerification();" action="http://localhost/theFitnessBox/php/insertIntoDB.php">
 					<br><br><br><br><br>
 					<font class="boxTextSetSignup">&#9594;&#10074;&#9473;&#10074;&#9592; Full Name:</font>
 					<br><br>

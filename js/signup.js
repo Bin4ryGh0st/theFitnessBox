@@ -92,12 +92,13 @@ function emailExists(email)
     	 	{
     	 		alert(this.responseText);
     	 	}
-    	 	verify();
     	}
   	}
   	xmlhttp.open("POST","verEm.php", true);
   	xmlhttp.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
   	xmlhttp.send("email="+email);
+  	verify();
+    console.log("verified");
 }
 
 function isEmail()
@@ -250,34 +251,5 @@ function finalVerification()
 	isBMI();
 	checkPass();
 	var d=verify();
-	if(d)
-	{	
-		var n=document.getElementById("signupName").value;
-		var e=document.getElementById("signupEmail").value;
-		var d=document.getElementById("signupDOB").value;
-		var g=document.getElementById("signupGender").value;
-		var b=document.getElementById("signupBMI").value;
-		var p=document.getElementById("signupPassword").value;
-		var xmlhttp1= new XMLHttpRequest();
-		xmlhttp1.onreadystatechange = function() 
-		{
-			if (this.readyState == 4 && this.status == 200) 
-			{
-				alert(this.responseText)
-				if(this.responseText=="no")
-				{
-					alert("Signup failed,please try again!");
-			 	}
-			 	else
-			 	{
-			 		alert(this.responseText);
-			 	}				
-				clrStats();
-			}
-	  	}
-	  	xmlhttp1.open("POST","insertIntoDB.php", true);
-	  	xmlhttp1.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-	  	xmlhttp1.send("n="+n+"&e="+e+"&d="+d+"&g="+g+"&b="+b+"&p="+p);
-	}
 	return d;
 }
