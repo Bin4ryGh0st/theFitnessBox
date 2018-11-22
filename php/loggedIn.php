@@ -42,12 +42,13 @@
 		<div class= "packHomeMenu">
 			<a href="http://localhost/theFitnessBox/html/main.html"><img src="http://localhost/theFitnessBox/images/tfbLogo.png" width=240 height=40></a>
 			<div class="homeMenu">
-				<input class="customButtonSelected" type="button" id="" value="button" onclick="">
-				<input class="customButton" type="button" id="" value="button" onclick="">
-				<input class="customButton" type="button" id="" value="button" onclick="">
-				<input class="customButton" type="button" id="" value="button" onclick="">
+				<input class="customButtonSelected" type="button" id="" value="My Profile" onclick="My Profile">
+				<input class="customButton" type="button" id="" value="Blogs" onclick="Blogs">
+				<input class="customButton" type="button" id="" value="Shop" onclick="Shop">
+				<input class="customButton" type="button" id="" value="Diet Plans" onclick="Diet Plans">
 				<input class="customButton" type="button" id="logOut" value="logout" onclick="location.href = 'http://localhost/theFitnessBox/php/logout.php'">
 			</div>
 		</div> 
+		<>
 	</body>
 </html>
