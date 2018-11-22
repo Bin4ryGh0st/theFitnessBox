@@ -24,6 +24,14 @@
 					exit;
 				}
 			}
+			elseif(!sizeof($_SESSION))
+			{
+				session_destroy();
+				echo "<br>Permission Denied!!<br>";
+				exit;
+			}
+			//print_r($_SESSION);
+			//exit;
 			//echo "<br>";
 			//print_r($_SESSION);
 		?>
@@ -38,7 +46,7 @@
 				<input class="customButton" type="button" id="" value="button" onclick="">
 				<input class="customButton" type="button" id="" value="button" onclick="">
 				<input class="customButton" type="button" id="" value="button" onclick="">
-				<input class="customButton" type="button" id="" value="button" onclick="">
+				<input class="customButton" type="button" id="logOut" value="logout" onclick="location.href = 'http://localhost/theFitnessBox/php/logout.php'">
 			</div>
 		</div> 
 	</body>
