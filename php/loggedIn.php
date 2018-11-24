@@ -20,14 +20,14 @@
 				else
 				{
 					session_destroy();
-					echo "<br>Wrong Email Or Password!!<br>";
+					echo "<h1>Incorrect Credentials!!<h1>";
 					exit;
 				}
 			}
 			elseif(!sizeof($_SESSION))
 			{
 				session_destroy();
-				echo "<br>Permission Denied!!<br>";
+				echo "<h1>Permission Denied!!<h1>";
 				exit;
 			}
 			//print_r($_SESSION);
@@ -42,13 +42,12 @@
 		<div class= "packHomeMenu">
 			<a href="http://localhost/theFitnessBox/html/main.html"><img src="http://localhost/theFitnessBox/images/tfbLogo.png" width=240 height=40></a>
 			<div class="homeMenu">
-				<input class="customButtonSelected" type="button" id="" value="My Profile" onclick="My Profile">
-				<input class="customButton" type="button" id="" value="Blogs" onclick="Blogs">
-				<input class="customButton" type="button" id="" value="Shop" onclick="Shop">
-				<input class="customButton" type="button" id="" value="Diet Plans" onclick="Diet Plans">
+				<input class="customButtonSelected" type="button" id="My Profile" value="My Profile" onclick="location.href = 'http://localhost/theFitnessBox/php/loggedIn.php'">
+				<input class="customButton" type="button" id="Blogs" value="Blogs" onclick="location.href = 'http://localhost/theFitnessBox/php/blogs.php'">
+				<input class="customButton" type="button" id="Shop" value="Shop" onclick="">
+				<input class="customButton" type="button" id="Diet Plans" value="Diet Plans" onclick="">
 				<input class="customButton" type="button" id="logOut" value="logout" onclick="location.href = 'http://localhost/theFitnessBox/php/logout.php'">
 			</div>
 		</div> 
-		<>
 	</body>
 </html>

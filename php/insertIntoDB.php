@@ -1,7 +1,7 @@
 <?php
-	//include "/var/www/html/theFitnessBox/php/mainDBConnect.php";
+	include "mainDBConnect.php";
 	session_start();
-	$conn = new mysqli("localhost","tfbRoot","toorBft","theFitnessBox");
+	//$conn = new mysqli("localhost","tfbRoot","toorBft","theFitnessBox");
 	$n=$_POST["signupName"];
 	$e=$_POST["signupEmail"];
 	$d=$_POST["signupDOB"];
