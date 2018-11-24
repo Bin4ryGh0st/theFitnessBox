@@ -59,11 +59,20 @@
 				echo "</center>";
 			?>
 		</div>
-
-		<div id="writeBlog" name="writeBlog" style="display: none;">
-			<form>
-				<input type="text">
-			</form>
-		</div>
+		
+		<center>
+			<div id="writeBlog" name="writeBlog" style="display: none;">
+				<form>
+					<br>
+					<input type="text" size="50" placeholder="Subject of the Blog." required>
+					<br><br>
+					<textarea rows="40" cols="100" placeholder="Content of the Blog." required></textarea>
+					<span></span>
+					<br><br>
+					<input type="submit" value="Submit Blog" class="customButton" style="opacity: 0.8;">
+				</form>
+			</div>
+		</center>
+		
 	</body>
 </html>
