@@ -39,7 +39,7 @@
 			<?php
 				//echo $_SESSION['email'];
 				include 'mainDBConnect.php';
-				$sql="SELECT * FROM blogs";
+				$sql="SELECT * FROM blogs order by dateOfPublishing";
 				$blogs = $conn->query($sql);
 				//$noBlogs = $blogs->num_rows;
 				//print_r($blogs);
@@ -50,7 +50,7 @@
 							//print_r($row);
 							echo "<h2>Topic : $row[topic]<br></h2>";
 							echo "<sup>Author's Email : $row[authorEmail] || Date of Publish : $row[dateOfPublishing]</sup><br>";
-							echo "<br>Blog:<br>";
+							echo "<br><u>Blog:</u><br>";
 							echo "$row[content]";
 							echo "<hr color='#ffffff'>";
 							echo "<hr color='#ffffff'>";
