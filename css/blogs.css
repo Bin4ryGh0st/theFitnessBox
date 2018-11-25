@@ -1,0 +1,33 @@
+.newBlog
+{
+	position: relative;
+	height: 3%;
+	border: none;
+	border-bottom: 2px solid #ffd700;
+	background-color: #000000;
+	overflow: auto;
+	transition-duration: 0.8s;
+}
+
+.newBlog span
+{
+	color: #ffd700;
+	font-size: 20px;
+}
+
+.newBlog:hover
+{
+	background-color: #ffd700;
+}
+
+.newBlog:hover span
+{
+	color: #000000;
+}
+
+.blogsDisplay div
+{
+	color: #ffd700;
+	background-color: #000000;
+	opacity: 0.9;
+}

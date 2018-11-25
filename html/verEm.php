@@ -1,6 +1,6 @@
 <?php
-	//include "/var/www/html/theFitnessBox/php/mainDBConnect.php";
-	$conn = new mysqli("localhost","tfbRoot","toorBft","theFitnessBox");
+	include "/var/www/html/theFitnessBox/php/mainDBConnect.php";
+	//$conn = new mysqli("localhost","tfbRoot","toorBft","theFitnessBox");
 	$email=$_POST["email"];
 	$sql="SELECT email FROM theFitnessBox.user WHERE email='$email';";
 	$res = $conn->query($sql);

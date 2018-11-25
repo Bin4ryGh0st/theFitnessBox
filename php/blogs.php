@@ -39,7 +39,7 @@
 			<?php
 				//echo $_SESSION['email'];
 				include 'mainDBConnect.php';
-				$sql="SELECT * FROM blogs order by dateOfPublishing";
+				$sql="SELECT * FROM blogs order by dateOfPublishing desc";
 				$blogs = $conn->query($sql);
 				//$noBlogs = $blogs->num_rows;
 				//print_r($blogs);
@@ -62,14 +62,14 @@
 		
 		<center>
 			<div id="writeBlog" name="writeBlog" style="display: none;">
-				<form>
+				<form id="addNewBlog" name="addNewBlog" method="post" action="http://localhost/theFitnessBox/php/insertBlog.php">
 					<br>
-					<input type="text" size="50" placeholder="Subject of the Blog." required>
+					<input type="text" size="50" placeholder="Subject of the Blog." id="newBlogTitle" name="newBlogTitle" required>
 					<br><br>
-					<textarea rows="40" cols="100" placeholder="Content of the Blog." required></textarea>
-					<span></span>
+					<textarea rows="45" cols="100" placeholder="Content of the Blog." id="newBlogContent" name="newBlogContent" required></textarea>
+					<span id="charsLeft" name="charsLeft"></span>
 					<br><br>
-					<input type="submit" value="Submit Blog" class="customButton" style="opacity: 0.8;">
+					<input type="submit" value="Submit Blog" class="customButton" id="submitBlog" name="submitBlog" style="opacity: 0.8;">
 				</form>
 			</div>
 		</center>
