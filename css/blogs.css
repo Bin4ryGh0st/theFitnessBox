@@ -31,3 +31,23 @@
 	background-color: #000000;
 	opacity: 0.9;
 }
+
+.blogContent
+{
+    border: 2px solid #ffd700;
+    background-color: #000000;
+    color: #ffd700;
+    /*font-size: 15px;*/
+    opacity: 0.9;
+}
+
+.blogTitle
+{
+	width: 35%;
+	height: 5%;
+	border: none;
+    border-bottom: 2px solid #ffd700;
+    background-color: #000000;
+    opacity: 0.9;
+    color: #ffd700;
+}

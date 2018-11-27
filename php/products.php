@@ -11,6 +11,7 @@
 		?>
 		<link rel="stylesheet" type="text/css" href="http://localhost/theFitnessBox/css/main.css" />
 		<link rel="stylesheet" type="text/css" href="http://localhost/theFitnessBox/css/products.css" />
+		<script src="http://localhost/theFitnessBox/js/products.js"></script>
 	</head>
 	<body bgcolor="#000000">
 		<div class= "packHomeMenu">
@@ -38,23 +39,70 @@
 					echo "<p>";
 						echo "<div class='Row leftRow'>";	
 							echo "<img src=\"" . $row['productPicture'] . "\" align='left'>" ;
+							echo "<br><br>";
 							echo "<span>";
 								echo "<u>Product</u> : " . $row['productName'];
-								echo "<br><sup>A product by : " . $row['brand'] . "</sup>";
-								
+							echo "</span>";
+							echo "<br><br>";
+							echo "<span>";		
+								echo "<u>Price</u> : " . $row['price'] . " INR.";
 							echo "</span>";	
+							echo "<br><br>";
+							echo "<span>";		
+								echo "<sup>A product by : " . $row['brand'] . "</sup>";
+							echo "</span>";	
+							/*echo "<br><br>";
+							echo "<span>";		
+								echo "<u>Double of Quantity Remaining: " . ($row['stockQuantity']+$row['stockQuantity']) . "</u>";
+							echo "</span>";*/
+							if($row['stockQuantity'] > 0)
+							{
+								echo "<br><br>";
+								echo "<input type='button' value='Add to Cart' id='$row[productID]' class='customButton alignButton'>";
+							}
+							else
+							{
+								echo "<br><br>";
+								echo "<input type='button' value='Out of Stock' class='customButton alignButton' onclick='outOfStock()'>";
+							}
+							
 						echo "</div>";
-						if($row = $r->fetch_assoc())
-						{
-							echo "<div class='Row rightRow'>";	
-								echo "<img src=\"" . $row['productPicture'] . "\" align='left'>" ;
-								echo "<span>";
-									echo "<u>Product</u> : " . $row['productName'];
-									echo "<br><sup>A product by : " . $row['brand'] . "</sup>";
-								echo "</span>";	
-							echo "</div>";
-						}		
 					echo "</p>";
+				if($row = $r->fetch_assoc())
+				{
+					echo "<p>";
+						echo "<div class='Row rightRow'>";	
+							echo "<img src=\"" . $row['productPicture'] . "\" align='left'>" ;
+							echo "<br><br>";
+							echo "<span>";
+								echo "<u>Product</u> : " . $row['productName'];
+							echo "</span>";
+							echo "<br><br>";
+							echo "<span>";		
+								echo "<u>Price</u> : " . $row['price'] . " INR.";
+							echo "</span>";	
+							echo "<br><br>";
+							echo "<span>";		
+								echo "<sup>A product by : " . $row['brand'] . "</sup>";
+							echo "</span>";	
+							/*echo "<br><br>";
+							echo "<span>";		
+								echo "<u>Double of Quantity Remaining: " . ($row['stockQuantity']+$row['stockQuantity']) . "</u>";
+							echo "</span>";*/
+							if($row['stockQuantity'] > 0)
+							{
+								echo "<br><br>";
+								echo "<input type='button' value='Add to Cart' id='$row[productID]' class='customButton alignButton'>";
+							}
+							else
+							{
+								echo "<br><br>";
+								echo "<input type='button' value='Out of Stock' class='customButton alignButton' onclick='outOfStock()'>";
+							}
+							
+						echo "</div>";
+					echo "</p>";
+				}		
 				echo "</div>";
 			}
 		?>

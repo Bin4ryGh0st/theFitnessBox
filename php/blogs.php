@@ -64,12 +64,12 @@
 			<div id="writeBlog" name="writeBlog" style="display: none;">
 				<form id="addNewBlog" name="addNewBlog" method="post" action="http://localhost/theFitnessBox/php/insertBlog.php">
 					<br>
-					<input type="text" size="50" placeholder="Subject of the Blog." id="newBlogTitle" name="newBlogTitle" required>
+					<input type="text" size="50" placeholder="Subject of the Blog." id="newBlogTitle" name="newBlogTitle" class="blogTitle" required>
 					<br><br>
-					<textarea rows="45" cols="100" placeholder="Content of the Blog." id="newBlogContent" name="newBlogContent" required></textarea>
+					<textarea rows="45" cols="100" placeholder="Content of the Blog." id="newBlogContent" name="newBlogContent" class="blogContent" required></textarea>
 					<span id="charsLeft" name="charsLeft"></span>
 					<br><br>
-					<input type="submit" value="Submit Blog" class="customButton" id="submitBlog" name="submitBlog" style="opacity: 0.8;">
+					<input type="submit" value="Post Blog" class="customButton" id="submitBlog" name="submitBlog" style="opacity: 0.8;">
 				</form>
 			</div>
 		</center>

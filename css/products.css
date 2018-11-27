@@ -18,7 +18,6 @@
 .leftRow
 {
 	float:left; 
-	
 }
 
 .rightRow
@@ -29,11 +28,21 @@
 .fullRow span
 {
 	color: #ffd700;
+	padding: 3%;
 	font-size: 18px;
 }
 
 .fullRow sup
 {
 	font-size: 12px;
-	/*padding: 2%;*/
+}
+
+.fullrow input
+{
+	float: right;
+}
+
+.alignButton
+{
+	margin: 1% 5%;
 }
