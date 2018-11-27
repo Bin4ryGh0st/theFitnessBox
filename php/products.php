@@ -36,7 +36,7 @@
 			while($row = $r->fetch_assoc())
 			{ 
 				echo "<div class='fullRow'>";
-					echo "<p>";
+					//echo "<p>";
 						echo "<div class='Row leftRow'>";	
 							echo "<img src=\"" . $row['productPicture'] . "\" align='left'>" ;
 							echo "<br><br>";
@@ -58,7 +58,7 @@
 							if($row['stockQuantity'] > 0)
 							{
 								echo "<br><br>";
-								echo "<input type='button' value='Add to Cart' id='$row[productID]' class='customButton alignButton'>";
+								echo "<input type='button' value='Add to Cart' id='$row[productID]' class='customButton alignButton' onclick='addToCart($row[productID])'>";
 							}
 							else
 							{
@@ -67,10 +67,10 @@
 							}
 							
 						echo "</div>";
-					echo "</p>";
+					//echo "</p>";
 				if($row = $r->fetch_assoc())
 				{
-					echo "<p>";
+					//echo "<p>";
 						echo "<div class='Row rightRow'>";	
 							echo "<img src=\"" . $row['productPicture'] . "\" align='left'>" ;
 							echo "<br><br>";
@@ -92,7 +92,7 @@
 							if($row['stockQuantity'] > 0)
 							{
 								echo "<br><br>";
-								echo "<input type='button' value='Add to Cart' id='$row[productID]' class='customButton alignButton'>";
+								echo "<input type='button' value='Add to Cart' id='$row[productID]' class='customButton alignButton' onclick='addToCart($row[productID])'>";
 							}
 							else
 							{
@@ -101,7 +101,7 @@
 							}
 							
 						echo "</div>";
-					echo "</p>";
+					//echo "</p>";
 				}		
 				echo "</div>";
 			}
