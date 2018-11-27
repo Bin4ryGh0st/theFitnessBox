@@ -24,7 +24,7 @@
 				<input class="customButton" type="button" id="logOut" value="logout" onclick="location.href = 'http://localhost/theFitnessBox/php/logout.php'">
 			</div>
 		</div> 
-		<br>
+		<br>	
 		<?php
 			include "mainDBConnect.php";
 			//$sql = "insert into products (productID) values (2);";
@@ -58,7 +58,7 @@
 							if($row['stockQuantity'] > 0)
 							{
 								echo "<br><br>";
-								echo "<input type='button' value='Add to Cart' id='$row[productID]' class='customButton alignButton' onclick='addToCart($row[productID])'>";
+								echo "<input type='button' value='Add to Cart' id='$row[productID]' name='$row[productName]' class='customButton alignButton' onclick='addToCart($row[productID],$row[price])'>";
 							}
 							else
 							{
@@ -92,7 +92,7 @@
 							if($row['stockQuantity'] > 0)
 							{
 								echo "<br><br>";
-								echo "<input type='button' value='Add to Cart' id='$row[productID]' class='customButton alignButton' onclick='addToCart($row[productID])'>";
+								echo "<input type='button' value='Add to Cart' id='$row[productID]' name='$row[productName]' class='customButton alignButton' onclick='addToCart($row[productID],$row[price])'>";
 							}
 							else
 							{
@@ -104,7 +104,15 @@
 					//echo "</p>";
 				}		
 				echo "</div>";
+				$_SESSION['refresh']=1;
 			}
 		?>
+		<br>
+		<center>	
+			<form method="POST" action="http://localhost/theFitnessBox/php/shopCheckout.php">
+					<input name="cartValues" id="cartValues" type="text" value="" class="cartValuesTransferBlock">
+					<input type="submit" onclick="return checkOut();" value="Checkout &#10148;&#10148;" class="customButton customCheckout"">
+			</form>
+		</center>
 	</body>
 </html>

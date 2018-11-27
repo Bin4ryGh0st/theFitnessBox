@@ -30,6 +30,8 @@
 	color: #ffd700;
 	background-color: #000000;
 	opacity: 0.9;
+	width: 80%;
+	font-size: 20px;
 }
 
 .blogContent
@@ -44,7 +46,7 @@
 .blogTitle
 {
 	width: 35%;
-	height: 5%;
+	height: 4%;
 	border: none;
     border-bottom: 2px solid #ffd700;
     background-color: #000000;

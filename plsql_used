@@ -1,0 +1,12 @@
+mysql> delimiter $$
+mysql> create trigger updateProducts
+    -> before insert on purchaseDetails
+    -> for each row
+    -> begin
+    -> update products
+    -> set stockQuantity = stockQuantity - 1
+    -> where products.productID = new.productID;                                                                                                                                                  -> end$$
+Query OK, 0 rows affected (0.24 sec)
+
+mysql> delimiter ;
+

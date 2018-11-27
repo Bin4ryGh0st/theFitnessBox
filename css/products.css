@@ -46,3 +46,45 @@
 {
 	margin: 1% 5%;
 }
+
+
+.customCheckout
+{
+	opacity: 0.9;
+	font-size: 25px;
+	padding:20px 25px 20px 25px;
+	border-radius: 50px;
+}
+
+.cartValuesTransferBlock
+{
+	display:none;
+}
+
+.cartHeading
+{
+	color: #ffd700;
+}
+
+.bill
+{
+	color: #ffd700;
+}
+
+.billPID
+{
+	position: absolute;
+	left: 2%;
+}
+
+.billPName
+{
+	position: absolute;
+	left: 8%;
+}
+
+.billPPrice
+{
+	position: absolute;
+	left: 30%;
+}
