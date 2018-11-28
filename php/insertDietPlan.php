@@ -5,15 +5,15 @@
 	if($_SERVER["REQUEST_METHOD"] == "POST" && $_SESSION['email'])
 	{
 		include "mainDBConnect.php";
-		$title = htmlspecialchars(str_replace("\"","'",$_POST['newBlogTitle']));
-		$content = htmlspecialchars(str_replace("\"","'",$_POST['newBlogContent']));
+		$title = htmlspecialchars(str_replace("\"","'",$_POST['newDietPlanTitle']));
+		$content = htmlspecialchars(str_replace("\"","'",$_POST['newDietPlanContent']));
 		//echo $title . $content;
 		//print_r($_POST);
 		$email = $_SESSION['email'];
 		$date = date("Y-m-d");
-		$sql = "INSERT INTO blogs values('$email','$date','$title',\"$content\");";
+		$sql = "INSERT INTO dietPlans values('$email','$date',$title,\"$content\");";
 		$conn->query($sql);
-		header("Location: http://localhost/theFitnessBox/php/blogs.php");
+		header("Location: http://localhost/theFitnessBox/php/dietPlans.php");
 		exit;
 	}
 	else

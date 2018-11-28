@@ -1,0 +1,55 @@
+.newDietPlan
+{
+	position: relative;
+	height: 3%;
+	border: none;
+	border-bottom: 2px solid #ffd700;
+	background-color: #000000;
+	overflow: auto;
+	transition-duration: 0.8s;
+}
+
+.newDietPlan span
+{
+	color: #ffd700;
+	font-size: 20px;
+}
+
+.newDietPlan:hover
+{
+	background-color: #ffd700;
+}
+
+.newDietPlan:hover span
+{
+	color: #000000;
+}
+
+.dietPlansDisplay div
+{
+	color: #ffd700;
+	background-color: #000000;
+	opacity: 0.9;
+	width: 80%;
+	font-size: 20px;
+}
+
+.dietPlanContent
+{
+    border: 2px solid #ffd700;
+    background-color: #000000;
+    color: #ffd700;
+    /*font-size: 15px;*/
+    opacity: 0.9;
+}
+
+.dietPlanTitle
+{
+	width: 35%;
+	height: 4%;
+	border: none;
+    border-bottom: 2px solid #ffd700;
+    background-color: #000000;
+    opacity: 0.9;
+    color: #ffd700;
+}
