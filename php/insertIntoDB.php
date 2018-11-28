@@ -1,6 +1,6 @@
 <?php
 	session_start();
-	if($_SERVER["REQUEST_METHOD"] == "POST")	
+	if($_SERVER["REQUEST_METHOD"] == "POST" && $_SESSION['email'])	
 	{
 		include "mainDBConnect.php";
 		//$conn = new mysqli("localhost","tfbRoot","toorBft","theFitnessBox");
