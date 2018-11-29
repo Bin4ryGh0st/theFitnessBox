@@ -68,7 +68,7 @@
 		</center>
 		<?php
 			include "mainDBConnect.php";
-			$sql="SELECT dateOfPurchase,orderID FROM purchaseHistory WHERE email='" . $_SESSION[email] . "';";
+			$sql="SELECT dateOfPurchase,orderID FROM purchaseHistory WHERE email='" . $_SESSION[email] . "' ORDER BY dateOfPurchase desc;";
 			//echo($sql);
 			$r = $conn->query($sql);
 			//print_r($r);
@@ -88,7 +88,14 @@
 					echo "</span>";
 					echo "<br>"; 
 				}
-			}		
+			}
+		?>
+		<center>
+			
+		</center>
+		<?php
+			$sql="SELECT dateOfPublishing FROM blogs WHERE authorEmail='" . $_SESSION['email'] . "';";
+				
 		?>
 	</body>
 </html>
