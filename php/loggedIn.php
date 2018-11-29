@@ -53,7 +53,7 @@
 				<input class="customButton" type="button" id="logOut" value="logout" onclick="location.href = 'http://localhost/theFitnessBox/php/logout.php'">
 			</div>
 		</div> 
-		<center style="color:#ffd700;">
+		<center class='golden'>
 			<?php
 				include "mainDBConnect.php";
 				$sql="SELECT name FROM user WHERE email='" . $_SESSION['email'] . "';";
@@ -61,8 +61,8 @@
 				$row=$r->fetch_assoc();
 				echo "<h1>Welcome " . $row['name'] . ",</h1>";
 			?>
-			<h2 ><u>Your Timeline with us :</u></h2>
-			<span><h3>Your order history :</h3></span>
+			<h2 >Your Timeline with us :</h2>
+			<span><h3><u>Your order history :</u></h3></span>
 			<span>Date of purchase:&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Order Id:</span>
 			<br><br>
 		</center>
@@ -74,7 +74,11 @@
 			//print_r($r);
 			if($r->num_rows<=0)
 			{
-				echo "<span><b>No purchases yet.<b></span>";
+				echo "<center class='red'>";
+					echo "<span><b>You haven't purchased anything yet.</b></span>";
+					echo "<br><br>";
+					echo "<input type='button' value='Shop for First time' class='customButton' onclick=\"location.href = 'http://localhost/theFitnessBox/php/products.php'\">";
+				echo "</center>";
 			}
 			else
 			{	
@@ -89,13 +93,39 @@
 					echo "<br>"; 
 				}
 			}
+			echo "<br>";
 		?>
-		<center>
-			
+		<center class='golden'>
+			<span><h3><u>Your Blog Posts :</u></h3></span>
+			<span>Date of Posting&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;Topic of the blog<span>
 		</center>
+		<br>
 		<?php
-			$sql="SELECT dateOfPublishing FROM blogs WHERE authorEmail='" . $_SESSION['email'] . "';";
-				
+			$sql="SELECT dateOfPublishing,topic FROM blogs WHERE authorEmail='" . $_SESSION['email'] . "' ORDER BY dateOfPublishing desc;";
+			$r=$conn->query($sql);
+			if($r->num_rows>0)
+			{
+				while($row=$r->fetch_assoc())
+				{
+					$topic = str_replace(' ', '-', $row['topic']);;
+					echo "<span class='fetchedContent'>";
+						echo "<span class='fdop'>" . $row['dateOfPublishing'] ."</span>";
+						echo "<a href = http://localhost/theFitnessBox/php/selectionSummary.php?blogDate=" . $row['dateOfPublishing'] ."&blogTopic=" . $topic . ">";
+						echo "	<span class='foid'>" . $row['topic'] ."</span>";
+						echo "</a>";
+						//print_r($topic);
+					echo "</span>";
+					echo "<br>"; 
+				}
+			}
+			else
+			{
+				echo "<center class='red'>";
+					echo "<span><b>You haven't posted anything yet.</b></span>";
+					echo "<br><br>";
+					echo "<input type='button' value='Write Your First Blog' class='customButton' onclick=\"location.href = 'http://localhost/theFitnessBox/php/blogs.php'\">";
+				echo "</center>";
+			}
 		?>
 	</body>
 </html>
